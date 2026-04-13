@@ -272,12 +272,10 @@ with right:
 # Bottom data table
 st.divider()
 st.subheader("📋 Station Detail (sorted by shortage first)")
-st.dataframe(
+table_df = (
     df_input[["start_station_id", "start_borough", "start_mode_landuse",
               "start_lat", "start_lng", "predicted_gap", "status"]]
     .sort_values("predicted_gap")
     .reset_index(drop=True)
-    .style.background_gradient(subset=["predicted_gap"], cmap="RdYlGn"),
-    use_container_width=True,
-    height=300
 )
+st.dataframe(table_df, use_container_width=True, height=300)
