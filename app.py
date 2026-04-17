@@ -194,7 +194,6 @@ color_map = {
 # Main Page
 # =========================================================
 st.title("🚲 Bike-Share Rebalancing Gap Prediction Dashboard")
-st.caption(f"Time: 08:00 AM Rush Hour | Stations: {len(df_input)} | Model: V3 MSE BEST")
 
 # KPI metric cards
 col1, col2, col3, col4 = st.columns(4)
